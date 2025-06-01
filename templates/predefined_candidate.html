@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Candidate Information</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #f7f9fc;
+            font-family: Arial, sans-serif;
+        }
+
+        .info-box {
+            max-width: 900px;
+            margin: 60px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .info-field {
+            margin-bottom: 15px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Back</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Candidate Info -->
+    <div class="info-box">
+        <h2 class="info-title">Candidate Profile</h2>
+
+        <div class="info-field">
+            <span class="info-label">Full Name:</span> {{ user.full_name }}
+        </div>
+        <div class="info-field">
+            <span class="info-label">Username:</span> {{ user.username }}
+        </div>
+        <div class="info-field">
+            <span class="info-label">Email:</span> {{ user.email }}
+        </div>
+        <div class="info-field">
+            <span class="info-label">Personal Profile Link:</span> <a href="{{user.profile_link}}" target="_blank">{{ user.profile_link }}</a>
+        </div>
+        <div class="info-field d-flex align-items-center justify-content-between">
+            <div>
+                <span class="info-label">Uploaded Resume File:</span>
+                {{ user.file_path.split('/')[-1] }}
+            </div>
+            <a href="{{ url_for('uploaded_file', filename=user.file_path) }}" target="_blank"
+                class="btn btn-sm btn-outline-primary ms-2">
+                View Resume
+            </a>
+        </div>
+        <div class="mt-4">
+            <h4>Short Summary of Your Resume:</h4>
+        </div>
+
+        <div class="accordion" id="resumeAccordion">
+            {% for section in sections %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading{{ loop.index }}">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        {{ section[0] }}
+                    </button>
+                </h2>
+                <div id="collapse{{ loop.index }}" class="accordion-collapse collapse show"
+                    aria-labelledby="heading{{ loop.index }}">
+                    <div class="accordion-body">
+                        {% for item in section[1] %}
+                        <p class="mb-1">• {{ item }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-cnx2bBLO5/1sROr+xGc8G6FV+CvDrGFX1+1eDYOYq9gF5eYXzACr3m/f/1N7A/WS"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

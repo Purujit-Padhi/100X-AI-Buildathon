@@ -1,0 +1,172 @@
+{
+    "D:/Python Projects/Hackathon/uploads/purujit_padhiresume_20250602_000506.pdf": [
+        [
+            "Experience",
+            [
+                "Software Developer Intern",
+                "ABC Corp"
+            ]
+        ],
+        [
+            "Roles/Responsibilities",
+            [
+                "RESTful APIs development",
+                "Unit test writing",
+                "App deployment"
+            ]
+        ],
+        [
+            "Achievements",
+            [
+                "RESTful APIs using Flask",
+                "Unit tests for data processing scripts",
+                "Assisted in deploying apps on Heroku"
+            ]
+        ],
+        [
+            "Certifications",
+            [
+                "Python for Everybody (Coursera)",
+                "Machine Learning (Stanford Online)"
+            ]
+        ],
+        [
+            "Languages/Technical Skills",
+            [
+                "Python",
+                "Java",
+                "C++",
+                "Flask",
+                "SQL",
+                "Machine Learning",
+                "Git"
+            ]
+        ]
+    ],
+    "D:/Python Projects/Hackathon/uploads/ram_abcresume_20250602_000554.pdf": [
+        [
+            "Experience",
+            [
+                "Research Experience",
+                "Teaching Experience",
+                "Work Experience (Industry)"
+            ]
+        ],
+        [
+            "Roles",
+            [
+                "PhD Student",
+                "Master's Student",
+                "Bachelor's Student",
+                "Researcher",
+                "Teacher",
+                "Industry Role (Specific title would vary)",
+                "Professional Affiliations"
+            ]
+        ],
+        [
+            "Achievements",
+            [
+                "Dissertation",
+                "Thesis",
+                "Publications/Presentations (Formatted to field)",
+                "Honors/Awards/Grants/Scholarships",
+                "Invited Lectures"
+            ]
+        ],
+        [
+            "Certificates",
+            [
+                "Certifications"
+            ]
+        ],
+        [
+            "Languages Known",
+            [
+                "Language: Skill 1, Skill 2"
+            ]
+        ]
+    ],
+    "D:/Python Projects/Hackathon/uploads/qwerresume_20250602_001002.pdf": [
+        [
+            "Experience",
+            [
+                "Software Developer Intern"
+            ]
+        ],
+        [
+            "Roles",
+            [
+                "Software Developer"
+            ]
+        ],
+        [
+            "Achievements",
+            [
+                "Built RESTful APIs using Flask",
+                "Wrote unit tests for data processing scripts",
+                "Assisted in deploying apps on Heroku"
+            ]
+        ],
+        [
+            "Certificates",
+            [
+                "Python for Everybody - Coursera",
+                "Machine Learning - Stanford Online"
+            ]
+        ],
+        [
+            "Languages/Skills",
+            [
+                "Python",
+                "Java",
+                "C++",
+                "Flask",
+                "SQL",
+                "Machine Learning",
+                "Git"
+            ]
+        ]
+    ],
+    "D:/Python Projects/Hackathon/uploads/qwerresume_20250602_001004.pdf": [
+        [
+            "Experience",
+            [
+                "Software Developer Intern"
+            ]
+        ],
+        [
+            "Roles",
+            [
+                "Software Developer"
+            ]
+        ],
+        [
+            "Achievements",
+            [
+                "Built RESTful APIs using Flask",
+                "Wrote unit tests for data processing scripts",
+                "Assisted in deploying apps on Heroku"
+            ]
+        ],
+        [
+            "Certifications",
+            [
+                "Python for Everybody (Coursera)",
+                "Machine Learning (Stanford Online)"
+            ]
+        ],
+        [
+            "Languages/Skills",
+            [
+                "Python",
+                "Java",
+                "C++",
+                "Flask",
+                "SQL",
+                "Machine Learning",
+                "Git"
+            ]
+        ]
+    ]
+}

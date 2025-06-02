@@ -75,7 +75,7 @@
                 <span class="info-label">Uploaded Resume File:</span>
                 {{ user.file_path.split('/')[-1] }}
             </div>
-            <a href="{{ url_for('uploaded_file', filename=user.file_path) }}" target="_blank"
+            <a href="{{ url_for('uploaded_file', filename=user.file_path.split('/')[-1]) }}" target="_blank"
                 class="btn btn-sm btn-outline-primary ms-2">
                 View Resume
             </a>

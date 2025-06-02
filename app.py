@@ -79,6 +79,7 @@ def download_file(filename):
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     filename = os.path.basename(filename)
+    print(filename)
     return send_from_directory('uploads', filename)
 
 

@@ -1,19 +1,17 @@
-import google.generativeai as genai
-from google.generativeai import types
+from google import genai
+from google.genai import types
 import pathlib
 import json
-import re
 import os
 
-
-genai.api_key = "AIzaSyAkK1riTDCdg2cdXMkg9lkrUxWuEOGgqb8"
+client = genai.Client(api_key="AIzaSyAkK1riTDCdg2cdXMkg9lkrUxWuEOGgqb8")
 folder = "uploads"
 
 # Retrieve and encode the PDF byte
 def gemini_analyse(filepath):
     filepath = pathlib.Path(filepath)
     prompt = "Ananlyse the resume/cv and return me the (Experience,Roles,Achievments,Certificate,Language Known) in simple and sort keywords in list format"
-    response = genai.models.generate_content(
+    response = client.models.generate_content(
     model="gemini-2.0-flash",
     contents=[
         types.Part.from_bytes(
@@ -95,7 +93,7 @@ def find_best_matching_resume(prompt: str, folder_path: str) -> str:
             print(f"Analyzing: {pdf_file.name}")
 
             # Send content + prompt to Gemini
-            response = genai.models.generate_content(
+            response = client.models.generate_content(
                 model="gemini-2.0-flash",  # You can use gemini-1.5-pro or flash too
                 contents=[
                     types.Part.from_bytes(
@@ -160,4 +158,4 @@ def json_find_best_match(prompt: str):
 
 
 if __name__ == "__main__":
-    pass
+    json_find_best_match("show me candidate based on sciende field")

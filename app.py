@@ -71,8 +71,9 @@ def async_ai_analysis(filepath):
 
 
 
-@app.route('/download/<filename>')
+@app.route('/uploads/<filename>')
 def download_file(filename):
+    filename = os.path.basename(filename)
     upload_folder = UPLOAD_FOLDER
     return send_from_directory(upload_folder,filename, as_attachment=True)
 

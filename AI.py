@@ -4,7 +4,7 @@ import pathlib
 import json
 import os
 
-client = genai.Client(api_key="AIzaSyAkK1riTDCdg2cdXMkg9lkrUxWuEOGgqb8")
+client = genai.Client(api_key="Api_Key")
 folder = "uploads"
 
 # Retrieve and encode the PDF byte
